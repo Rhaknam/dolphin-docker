@@ -24,6 +24,9 @@ RUN apt-get -y install r-base r-base-dev
 
 
 RUN pip install MySQL-python
+RUN pip install --no-use-wheel --upgrade distribute
+RUN pip install simple-crypt
+RUN pip install boto3
 
 # Enable apache mods.
 RUN a2enmod php5
